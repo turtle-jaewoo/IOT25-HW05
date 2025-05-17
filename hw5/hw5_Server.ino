@@ -6,16 +6,15 @@
 #include <BLEDevice.h>
 #include <BLEServer.h>
 #include <BLEUtils.h>
-#include <BLE2902.h>        // For BLE Descriptors (like CCCD for notifications)
+#include <BLE2902.h>       
 
-#include <DHT.h>            // Include DHT sensor library
+#include <DHT.h>           
 
 // --- DHT Sensor Settings ---
-#define DHT_PIN 18           // GPIO pin ESP32 is connected to the DHT11 data pin (예: GPIO4)
-                            // <<<<<<<<<<< 중요: 실제 연결한 GPIO 핀 번호로 바꿔줘!
-#define DHT_TYPE DHT11      // Define an DHT TYPE as DHT 11
-                            // (만약 DHT22나 AM2302를 사용한다면 DHT22로 바꿔)
-
+#define DHT_PIN 18           
+                            
+#define DHT_TYPE DHT11     
+                           
 DHT dht(DHT_PIN, DHT_TYPE); // Initialize DHT sensor object
 
 //Default Temperature is in Celsius
@@ -161,5 +160,5 @@ void loop() {
       lastTime = millis();
     }
   }
-  delay(100); // Small delay
+  delay(100); 
 }
